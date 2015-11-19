@@ -116,9 +116,9 @@ init({Format, SampleRate, Channels}) ->
 		'ILBC' -> ilbc_codec_drv;
 		'OPUS' -> opus_codec_drv
 	end,
-	Result = do([error_m ||
+	Result = ok,
 			load_library(DriverName),
-			load_library(resampler_drv)]),
+			load_library(resampler_drv),
 
 	case Result of
 		ok ->

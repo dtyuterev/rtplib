@@ -59,8 +59,8 @@ videocodec_i420=no
 videocodec_vp8=no
 
 AC_ARG_WITH([audiocodec-opus],
-	    AC_HELP_STRING([--with-audiocodec-opus],[enable OPUS audiocodec [default=yes].]),
-	    [audiocodec_opus="$withval"],[audiocodec_opus="yes"])
+	    AC_HELP_STRING([--with-audiocodec-opus],[enable OPUS audiocodec [default=no].]),
+	    [audiocodec_opus="$withval"],[audiocodec_opus="no"])
 
 AC_ARG_WITH([audiocodec-speex],
 	    AC_HELP_STRING([--with-audiocodec-speex],[enable SPEEX audiocodec [default=yes].]),
@@ -71,8 +71,8 @@ AC_ARG_WITH([audiocodec-ilbc],
 	    [audiocodec_ilbc="$withval"],[audiocodec_ilbc="yes"])
 
 AC_ARG_WITH([audiocodec-g729],
-	    AC_HELP_STRING([--with-audiocodec-g729],[enable G.729 audiocodec [default=yes].]),
-	    [audiocodec_g729="$withval"],[audiocodec_g729="yes"])
+	    AC_HELP_STRING([--with-audiocodec-g729],[enable G.729 audiocodec [default=no].]),
+	    [audiocodec_g729="$withval"],[audiocodec_g729="no"])
 
 AC_CHECK_HEADER([spandsp/telephony.h],[audiocodec_dvi="yes"],[AC_MSG_ERROR([<spandsp/telephony.h> header not found])])
 AC_CHECK_HEADER([spandsp/ima_adpcm.h],,[AC_MSG_ERROR([<spandsp/ima_adpcm.h> header not found])],[
@@ -237,8 +237,6 @@ AC_MSG_RESULT([
       G.723 codec: ................... ${audiocodec_g726}
       G.723.1 codec: ................. ${audiocodec_g7231}
       G.726 codec: ................... ${audiocodec_g726}
-      G.729 codec: ................... ${audiocodec_g729}
-      G.729.1 codec: ................. ${audiocodec_g7291}
       GSM-FR codec: .................. ${audiocodec_gsmfr}
       iLBC codec: .................... ${audiocodec_ilbc}
       ISAC codec: .................... ${audiocodec_isac}
