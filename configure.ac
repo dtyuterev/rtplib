@@ -67,8 +67,8 @@ AC_ARG_WITH([audiocodec-speex],
 	    [audiocodec_speex="$withval"],[audiocodec_speex="yes"])
 
 AC_ARG_WITH([audiocodec-ilbc],
-	    AC_HELP_STRING([--with-audiocodec-ilbc],[enable iLBC audiocodec [default=yes].]),
-	    [audiocodec_ilbc="$withval"],[audiocodec_ilbc="yes"])
+	    AC_HELP_STRING([--with-audiocodec-ilbc],[enable iLBC audiocodec [default=no].]),
+	    [audiocodec_ilbc="$withval"],[audiocodec_ilbc="no"])
 
 AC_ARG_WITH([audiocodec-g729],
 	    AC_HELP_STRING([--with-audiocodec-g729],[enable G.729 audiocodec [default=no].]),
