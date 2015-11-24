@@ -3,7 +3,6 @@ SUBDIRS = c_src
 all:
 	$(mkdir_p) ./priv/
 	$(install_sh_PROGRAM) c_src/.libs/*.so ./priv/
-	@VSN="@PACKAGE_VERSION@" $(REBAR) compile
 check:
 	$(mkdir_p) ./priv/
 	$(install_sh_PROGRAM) c_src/.libs/*.so ./priv/
